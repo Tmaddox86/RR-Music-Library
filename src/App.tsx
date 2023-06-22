@@ -24,11 +24,15 @@ function App() {
   }
   }, [searchTerm])
 
-  const handleSearch = (e, term) => {
+ /* interface SearchBarProps {}
+
+  const SearchBar = (props: SearchBarProps) => {
+  */
+  const handleSearch = (e: { preventDefault: () => void; }, term: any) => {
     e.preventDefault()
     setSearchTerm(term)
   }
-
+  
   return (
     <div className="App">
       <SearchBar handleSearch={handleSearch} />
